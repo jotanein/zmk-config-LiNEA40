@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,
+            //スクロール方向を逆転,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -67,38 +67,13 @@
         compatible = "zmk,combos";
 
         ZenkakuHankaku {
-            bindings = <&kp GRAVE>;
-            key-positions = <11 12>;
-        };
-
-        DeleteKey {
-            bindings = <&kp DEL>;
-            key-positions = <7 8>;
-        };
-
-        InsertKey {
-            bindings = <&kp INS>;
+            bindings = <&kp LANGUAGE_2>;
             key-positions = <6 7>;
         };
 
-        CenterClick {
-            bindings = <&mkp MB3>;
-            key-positions = <17 16>;
-        };
-
-        RightClick {
-            bindings = <&mkp MB2>;
-            key-positions = <18 17>;
-        };
-
-        PrevClick {
-            bindings = <&mkp MB4>;
-            key-positions = <27 28>;
-        };
-
-        ClickNext {
-            bindings = <&mkp MB5>;
-            key-positions = <26 27>;
+        DeleteKey {
+            bindings = <&kp LANG1>;
+            key-positions = <7 8>;
         };
     };
 
@@ -123,10 +98,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W             &kp E         &kp R    &kp T                                          &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A       &kp S             &kp D         &kp F    &kp G                                          &kp H        &kp J  &lt 3 K    &kp L    &kp MINUS
-&kp Z       &kp X             &kp C         &kp V    &kp B                                          &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LSHIFT  &mt LEFT_WIN TAB  &kp LEFT_ALT  &kp INS  &lt 2 ENTER  &mt LCTRL SPACE    &kp BACKSPACE  &lt 4 ENTER         &mo 3      &mo 3    &kp ENTER
+&kp Q       &kp W             &kp E         &kp R    &kp T                                          &kp Y        &kp U  &kp I        &kp O    &kp P
+&kp A       &kp S             &kp D         &kp F    &kp G                                          &kp H        &kp J  &lt 3 K      &kp L    &kp MINUS
+&kp Z       &kp X             &kp C         &kp V    &kp B                                          &kp N        &kp M  &lt 5 COMMA  &kp DOT  &kp SLASH
+&kp LSHIFT  &mt LEFT_WIN TAB  &kp LEFT_ALT  &kp INS  &lt 2 ENTER  &mt LCTRL SPACE    &kp BACKSPACE  &lt 4 ENTER         &mo 3        &mo 3    &kp ENTER
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
